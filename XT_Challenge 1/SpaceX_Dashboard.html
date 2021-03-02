@@ -26,15 +26,14 @@
 		  <div class="logoTesla"><img src="images/Space X Logo.gif" width="200"></div>
 		</div>
 		  <script >
-		  	  var myChart = document.getElementById('O2levelOne').getContext('2d');
-              
-              //Global Options
+		  	  var myChart = document.getElementById('O2levelOne').getContext('2d');             
+//Horizontal bar chart
 
               Chart.defaults.global.defaultFontSize = 18;
               Chart.defaults.global.defaultFontColor = 'white';
   
               var foodChart = new Chart(myChart, {
-                  type: 'horizontalBar', //bar, blabla
+                  type: 'horizontalBar',
                   data: {
                       labels: ['O2 Levels'],
                       datasets: [{
@@ -62,16 +61,14 @@
                       }
                   },
               });
+//Horizontal bar chart
+              var myChart = document.getElementById('O2levelTwo').getContext('2d');            
 
-              var myChart = document.getElementById('O2levelTwo').getContext('2d');
-              
-              //Global Options
 
               Chart.defaults.global.defaultFontSize = 18;
-              Chart.defaults.global.defaultFontColor = 'white';
-  
+              Chart.defaults.global.defaultFontColor = 'white';  
               var foodChart = new Chart(myChart, {
-                  type: 'horizontalBar', //bar, blabla
+                  type: 'horizontalBar', 
                   data: {
                       labels: ['O2 Levels'],
                       datasets: [{
@@ -99,15 +96,15 @@
                       }
                   },
               });
-              var myChart = document.getElementById('O2levelThree').getContext('2d');
-              
-              //Global Options
+//Horizontal bar chart              
+              var myChart = document.getElementById('O2levelThree').getContext('2d');            
+
 
               Chart.defaults.global.defaultFontSize = 18;
               Chart.defaults.global.defaultFontColor = 'white';
   
               var foodChart = new Chart(myChart, {
-                  type: 'horizontalBar', //bar, blabla
+                  type: 'horizontalBar', 
                   data: {
                       labels: ['O2 Levels'],
                       datasets: [{
@@ -135,15 +132,13 @@
                       }
                   },
               });
-                            var myChart = document.getElementById('O2levelFour').getContext('2d');
-              
-              //Global Options
+//Horizontal bar chart
+              var myChart = document.getElementById('O2levelFour').getContext('2d');  
 
               Chart.defaults.global.defaultFontSize = 18;
-              Chart.defaults.global.defaultFontColor = 'white';
-  
+              Chart.defaults.global.defaultFontColor = 'white'; 
               var foodChart = new Chart(myChart, {
-                  type: 'horizontalBar', //bar, blabla
+                  type: 'horizontalBar',
                   data: {
                       labels: ['O2 Levels'],
                       datasets: [{
@@ -171,10 +166,9 @@
                       }
                   },
               });
-
+//Bar chart
             var myChart = document.getElementById('foodData').getContext('2d');
-            
-            //Global Options
+           
             Chart.defaults.global.defaultFontSize = 18;
             Chart.defaults.global.defaultFontColor = 'white';
 
@@ -208,13 +202,12 @@
                     }
                 },
             });
-
+//Line chart
             var myChart = document.getElementById('fuel').getContext('2d');
             
-            //Global Options
+
             Chart.defaults.global.defaultFontSize = 18;
             Chart.defaults.global.defaultFontColor = 'white';
-
             var foodChart = new Chart(myChart, {
                 type: 'line', 
                 data: {
@@ -237,7 +230,7 @@
 
                 },
             });
-
+//Pie chart
             var myChart = document.getElementById('engineHealth').getContext('2d');
             
 
@@ -245,13 +238,14 @@
             Chart.defaults.global.defaultFontColor = 'white';
 
             var foodChart = new Chart(myChart, {
-                type: 'doughnut', 
+                type: 'pie', 
                 data: {
                     labels: ['Truster Main', 'Trusters Second', 'Landing trusters'],
                     datasets: [{
                         label: 'Engines',
-                        data: [90, 30, 90],
-                        backgroundColor: ['#B13DD9','#D99B11','#26D88F'],
+                        data: [90, 90, 90],
+                        //backgroundColor: '#0E1428',
+                        backgroundColor: ['#B13DD9','#26D88F','#8C6612'],
                         borderWidth:0,
                         borderColor:'#999',
                         hoverBorderWidth:2,
@@ -271,12 +265,6 @@
                     }
                 },
             });
-
-
-
-
-
-
 		  </script>
 
 	</body>
