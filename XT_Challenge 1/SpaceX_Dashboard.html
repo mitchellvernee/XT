@@ -22,7 +22,7 @@
 		  <div class="nameFour"><img src="images/Hans.gif" width="200"></div>
 		  <div class="extraData"><canvas id="foodData" width="400" height="400" ></canvas></div>
 		  <div class="foodData"><canvas id="fuel" width="400" height="300" ></canvas></div> 
-		  <div class="distanceData"><canvas id="pie" width="400" height="300"></div>
+		  <div class="distanceData"><canvas id="engineHealth" width="400" height="300"></div>
 		  <div class="logoTesla"><img src="images/Space X Logo.gif" width="200"></div>
 		</div>
 		  <script >
@@ -235,6 +235,40 @@
                         fontSize:20
                     },
 
+                },
+            });
+
+            var myChart = document.getElementById('engineHealth').getContext('2d');
+            
+
+            Chart.defaults.global.defaultFontSize = 18;
+            Chart.defaults.global.defaultFontColor = 'white';
+
+            var foodChart = new Chart(myChart, {
+                type: 'doughnut', 
+                data: {
+                    labels: ['Truster Main', 'Trusters Second', 'Landing trusters'],
+                    datasets: [{
+                        label: 'Engines',
+                        data: [90, 30, 90],
+                        backgroundColor: ['#B13DD9','#D99B11','#26D88F'],
+                        borderWidth:0,
+                        borderColor:'#999',
+                        hoverBorderWidth:2,
+                        hoverBorderColor:'white'
+                    }]
+                },
+                options: {
+                    title:{
+                        display:true,
+                        text:'Health of the engines',
+                        fontSize:20
+                    },
+                    legend:{
+                        position:'right',
+                        display:true,
+                        borderWidth:1,
+                    }
                 },
             });
 
