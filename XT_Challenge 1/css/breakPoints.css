@@ -1,0 +1,78 @@
+
+			body{
+				  background-color: #3c3d42;
+				  font-family: 'Quicksand', sans-serif;
+			}
+
+			.grid-container {
+			  display: grid;
+			  grid-template-columns: 50px 285px 500px 500px 50px;
+			  grid-template-rows: 50px 120px 120px 120px 120px 400px 50px;
+			  gap: 20px;
+			  grid-template-areas:
+			    ". . . . ."
+			    ". nameOne mainData extraData ."
+			    ". nameTwo mainData extraData ."
+			    ". nameThree mainData extraData ."
+			    ". nameFour mainData extraData ."
+			    ". logoTesla foodData distanceData ."
+			    ". . . . .";
+			}
+
+			@media only screen and (max-width: 950px) {
+					.grid-container {
+				    display: grid;
+				    grid-template-columns: 50px 285px 500px 50px;
+				    grid-template-rows: 50px 100px 100px 100px 100px 70px 550px 400px 400px 50px;
+				    gap: 20px ;
+				    grid-template-areas:
+				    ". . . ."
+				    ". nameOne mainData ."
+				    ". nameTwo mainData ."
+				    ". nameThree mainData ."
+				    ". nameFour mainData ."
+				    ". . mainData ."
+				    ". . extraData ."
+				    ". . foodData ."
+				    ". logoTesla distanceData .";
+
+				}
+			}
+
+			@media only screen and (max-width: 550px) {
+				.grid-container {
+				  display: grid;
+				  grid-template-columns: 50px 400px 50px;
+				  grid-template-rows: 50px 100px 100px 100px 100px 450px 450px 300px 300px 300px 50px ;
+				  gap: 20px ;
+				  grid-template-areas:
+				    ". . ."
+				    ". nameOne ."
+				    ". nameTwo ."
+				    ". nameThree ."
+				    ". nameFour ."
+				    ". mainData ."
+				    ". extraData ."
+				    ". foodData ."
+				    ". distanceData ."
+				    ". logoTesla ."
+				    ". . .";
+				}
+			}
+
+			.nameOne { grid-area: nameOne; }
+			.nameTwo { grid-area: nameTwo; }
+			.mainData { grid-area: mainData; }
+			.nameThree { grid-area: nameThree; }
+			.nameFour { grid-area: nameFour; }
+			.extraData { grid-area: extraData; }
+			.foodData { grid-area: foodData; }
+			.distanceData { grid-area: distanceData; }
+			.logoTesla { grid-area: logoTesla; }
+
+			.grid-container > div {
+				  background-color: #4f5057;
+				  text-align: center;
+				  padding: 20px 0;
+				  font-size: 30px;
+				}

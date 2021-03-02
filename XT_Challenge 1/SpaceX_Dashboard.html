@@ -3,7 +3,250 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>SpaceX Dashboard</title>
+		<link rel="stylesheet" type="text/css" href="css/breakPoints.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+		<script src="js/myChart.js"></script> 		
 	</head>
-	<body>
+		<div class="grid-container">
+		  <div class="nameOne"><img src="images/fakherdine.gif" width="200"></div>
+		  <div class="nameTwo"><img src="images/Jeff Pezos.gif" width="200"></div>
+		  <div class="mainData">
+		  	<canvas id="O2levelOne" width="400" height="100" ></canvas>
+		  	<canvas id="O2levelTwo" width="400" height="105" ></canvas>
+		  	<canvas id="O2levelThree" width="400" height="110" ></canvas>
+		  	<canvas id="O2levelFour" width="400" height="100" ></canvas>
+		  </div>
+		  <div class="nameThree"><img src="images/Andrea Kuiper.gif" width="200"></div>
+		  <div class="nameFour"><img src="images/Hans.gif" width="200"></div>
+		  <div class="extraData"><canvas id="foodData" width="400" height="400" ></canvas></div>
+		  <div class="foodData"><canvas id="fuel" width="400" height="300" ></canvas></div> 
+		  <div class="distanceData"><canvas id="pie" width="400" height="300"></div>
+		  <div class="logoTesla"><img src="images/Space X Logo.gif" width="200"></div>
+		</div>
+		  <script >
+		  	  var myChart = document.getElementById('O2levelOne').getContext('2d');
+              
+              //Global Options
+
+              Chart.defaults.global.defaultFontSize = 18;
+              Chart.defaults.global.defaultFontColor = 'white';
+  
+              var foodChart = new Chart(myChart, {
+                  type: 'horizontalBar', //bar, blabla
+                  data: {
+                      labels: ['O2 Levels'],
+                      datasets: [{
+                          label: 'O2 Levels',
+                          data: [[10,60], [90,100]],
+                          backgroundColor: ['#26D88F'],
+                          borderWidth:0,
+                          borderColor:'#ffffff',
+                          hoverBorderWidth:2,
+                          hoverBorderColor:'white',
+                          categoryPercentage: 2,
+                          barPercentage: 2
+                      }]
+                  },
+                  options: {
+                      title:{
+                          display:false,
+                          text:'O2 Levels',
+                          fontSize:20
+                      },
+                      legend:{
+                          position:'right',
+                          display:false,
+                          borderWidth:1,
+                      }
+                  },
+              });
+
+              var myChart = document.getElementById('O2levelTwo').getContext('2d');
+              
+              //Global Options
+
+              Chart.defaults.global.defaultFontSize = 18;
+              Chart.defaults.global.defaultFontColor = 'white';
+  
+              var foodChart = new Chart(myChart, {
+                  type: 'horizontalBar', //bar, blabla
+                  data: {
+                      labels: ['O2 Levels'],
+                      datasets: [{
+                          label: 'O2 Levels',
+                          data: [[10,95], [90,100]],
+                          backgroundColor: ['#26D88F'],
+                          borderWidth:0,
+                          borderColor:'#ffffff',
+                          hoverBorderWidth:2,
+                          hoverBorderColor:'white',
+                          categoryPercentage: 2,
+                          barPercentage: 2
+                      }]
+                  },
+                  options: {
+                      title:{
+                          display:false,
+                          text:'O2 Levels',
+                          fontSize:20
+                      },
+                      legend:{
+                          position:'right',
+                          display:false,
+                          borderWidth:1,
+                      }
+                  },
+              });
+              var myChart = document.getElementById('O2levelThree').getContext('2d');
+              
+              //Global Options
+
+              Chart.defaults.global.defaultFontSize = 18;
+              Chart.defaults.global.defaultFontColor = 'white';
+  
+              var foodChart = new Chart(myChart, {
+                  type: 'horizontalBar', //bar, blabla
+                  data: {
+                      labels: ['O2 Levels'],
+                      datasets: [{
+                          label: 'O2 Levels',
+                          data: [[10,95], [90,100]],
+                          backgroundColor: ['#26D88F'],
+                          borderWidth:0,
+                          borderColor:'#ffffff',
+                          hoverBorderWidth:2,
+                          hoverBorderColor:'white',
+                          categoryPercentage: 2,
+                          barPercentage: 2
+                      }]
+                  },
+                  options: {
+                      title:{
+                          display:false,
+                          text:'O2 Levels',
+                          fontSize:20
+                      },
+                      legend:{
+                          position:'right',
+                          display:false,
+                          borderWidth:1,
+                      }
+                  },
+              });
+                            var myChart = document.getElementById('O2levelFour').getContext('2d');
+              
+              //Global Options
+
+              Chart.defaults.global.defaultFontSize = 18;
+              Chart.defaults.global.defaultFontColor = 'white';
+  
+              var foodChart = new Chart(myChart, {
+                  type: 'horizontalBar', //bar, blabla
+                  data: {
+                      labels: ['O2 Levels'],
+                      datasets: [{
+                          label: 'O2 Levels',
+                          data: [[10,70], [90,100]],
+                          backgroundColor: ['#26D88F'],
+                          borderWidth:0,
+                          borderColor:'#ffffff',
+                          hoverBorderWidth:2,
+                          hoverBorderColor:'white',
+                          categoryPercentage: 2,
+                          barPercentage: 2
+                      }]
+                  },
+                  options: {
+                      title:{
+                          display:false,
+                          text:'O2 Levels',
+                          fontSize:20
+                      },
+                      legend:{
+                          position:'right',
+                          display:false,
+                          borderWidth:1,
+                      }
+                  },
+              });
+
+            var myChart = document.getElementById('foodData').getContext('2d');
+            
+            //Global Options
+            Chart.defaults.global.defaultFontSize = 18;
+            Chart.defaults.global.defaultFontColor = 'white';
+
+            var foodChart = new Chart(myChart, {
+                type: 'bar', 
+                data: {
+                    labels: ['Prefab Burger', 'Soda', 'Twinkies', 'Mars Bar', 'Water'],
+                    datasets: [{
+                        label: 'Food Storage',
+                        data: [ 100, 64, 85, 80, 96],
+                        //backgroundColor: '#0E1428',
+                        backgroundColor: ['#26d88f', '#d62727', '#26d88f', '#26d88f','#26d88f'],
+                        borderWidth:0,
+                        borderColor:'#eee',
+                        hoverBorderWidth:2,
+                        hoverBorderColor:'white',
+                        barThickness: 'flex',
+                        minBarLength: 4,
+                    }]
+                },
+                options: {
+                    title:{
+                        display:true,
+                        text:'Food Storage',
+                        fontSize:20
+                    },
+                    legend:{
+                        position:'right',
+                        display:false,
+                        borderWidth:1,
+                    }
+                },
+            });
+
+            var myChart = document.getElementById('fuel').getContext('2d');
+            
+            //Global Options
+            Chart.defaults.global.defaultFontSize = 18;
+            Chart.defaults.global.defaultFontColor = 'white';
+
+            var foodChart = new Chart(myChart, {
+                type: 'line', 
+                data: {
+                    labels: ['100', '80', '50', '30', '0'],
+                    datasets: [{
+                        label: 'Fuel',
+                        data: [100, 90, 70, 60, 40],                      
+                        borderWidth:0,
+                        borderColor:'#fff',
+                        hoverBorderWidth:2,
+                        hoverBorderColor:'white'
+                    }]
+                },
+                options: {
+                    title:{
+                        display:true,
+                        text:'Amount of fuel',
+                        fontSize:20
+                    },
+
+                },
+            });
+
+
+
+
+
+
+		  </script>
+
 	</body>
 </html>
+
+
+
